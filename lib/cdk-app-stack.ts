@@ -1,16 +1,23 @@
-import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import { Code, Function, Runtime } from 'aws-cdk-lib/aws-lambda';
+import * as path from 'node:path';
+import { Stack, StackProps } from 'aws-cdk-lib';
+import { LambdaRestApi } from 'aws-cdk-lib/aws-apigateway';
 
-export class CdkAppStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+export class CdkAppStack extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
+    const fn = new Function(this, 'CdkFunction', {
+      runtime: Runtime.NODEJS_20_X,
+      handler: 'index.handler',
+      code: Code.fromAsset(path.join(__dirname, '../build/src/lambda-handler')),
+    });
 
-    // example resource
-    // const queue = new sqs.Queue(this, 'CdkAppQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    const endpoint = new LambdaRestApi(this, `ApiGwEndpoint`, {
+      handler: fn,
+      restApiName: `CdkApi`,
+    });
+
   }
 }
