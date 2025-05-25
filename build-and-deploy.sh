@@ -2,4 +2,4 @@
 
 rm -rf ./build
 npm run build
-cdk deploy
+cdk deploy --all
