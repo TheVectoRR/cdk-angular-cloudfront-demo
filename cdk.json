@@ -79,6 +79,11 @@
     "@aws-cdk/aws-lambda-nodejs:sdkV3ExcludeSmithyPackages": true,
     "@aws-cdk/aws-stepfunctions-tasks:fixRunEcsTaskPolicy": true,
     "@aws-cdk/aws-ec2:bastionHostUseAmazonLinux2023ByDefault": true,
-    "@aws-cdk/aws-route53-targets:userPoolDomainNameMethodWithoutCustomResource": true
+    "@aws-cdk/aws-route53-targets:userPoolDomainNameMethodWithoutCustomResource": true,
+    "dev": {
+      "certificateArn": "arn:aws:acm:us-east-1:836024728316:certificate/e807d6d4-22aa-49c6-9325-65d757f3f6ee",
+      "domainName": "vecode.nl",
+      "siteSubDomain": "dev"
+    }
   }
 }
