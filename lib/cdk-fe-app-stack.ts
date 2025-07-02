@@ -83,7 +83,7 @@ export class CdkFeAppStack extends Stack {
     });
 
     new BucketDeployment(this, 'DeployWithValidation', {
-      sources: [Source.asset('./src/frontend-app')],
+      sources: [Source.asset('./src/angular-app/dist/angular-app/browser')],
       destinationBucket: siteBucket,
       distribution,
       distributionPaths: ['/*']
