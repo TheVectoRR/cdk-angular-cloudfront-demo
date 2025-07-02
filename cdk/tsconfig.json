@@ -20,5 +20,7 @@
     "strictPropertyInitialization": false,
     "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": ["node_modules", "cdk.out", "src/angular-app"]
+  "exclude": ["node_modules", "cdk.out",
+    "../angular-app"
+  ]
 }

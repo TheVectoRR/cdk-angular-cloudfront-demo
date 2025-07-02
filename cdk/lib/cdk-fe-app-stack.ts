@@ -64,13 +64,13 @@ export class CdkFeAppStack extends Stack {
         {
           httpStatus: 403,
           responseHttpStatus: 200,
-          responsePagePath: '/error.html',
+          responsePagePath: '/error.html', // TODO add error page
           ttl: Duration.minutes(5),
         },
         {
           httpStatus: 404,
           responseHttpStatus: 200,
-          responsePagePath: '/error.html',
+          responsePagePath: '/error.html', // TODO add error page
           ttl: Duration.minutes(5),
         },
       ],
@@ -83,7 +83,7 @@ export class CdkFeAppStack extends Stack {
     });
 
     new BucketDeployment(this, 'DeployWithValidation', {
-      sources: [Source.asset('./src/angular-app/dist/angular-app/browser')],
+      sources: [Source.asset('../angular-app/dist/angular-app/browser')],
       destinationBucket: siteBucket,
       distribution,
       distributionPaths: ['/*']
