@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule } from 'lucide-angular';
 
 interface Skills {
   title: string;
@@ -13,7 +12,6 @@ interface Skills {
   standalone: true,
   imports: [
     CommonModule,
-    LucideAngularModule,
   ],
   templateUrl: './vectorit-website.component.html',
   styleUrls: ['./vectorit-website.component.css'],
