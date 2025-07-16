@@ -56,7 +56,7 @@ export class CdkFeAppStack extends Stack {
         origin: s3Origin,
         viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       },
-      defaultRootObject: 'index.html',
+      defaultRootObject: 'index.csr.html',
       domainNames: [siteDomain],
       certificate: Certificate.fromCertificateArn(this, 'Cert', certificateArn),
       minimumProtocolVersion: SecurityPolicyProtocol.TLS_V1_2_2021,
