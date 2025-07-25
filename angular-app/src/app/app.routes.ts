@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { VectoritWebsiteComponent } from './vectorit-website.component/vectorit-website.component';
+import { AboutComponent } from './pages/about-component/about-component';
 
 export const routes: Routes = [{
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'about'
 }, {
-    path: 'home',
-    component: VectoritWebsiteComponent
+    path: 'about',
+    component: AboutComponent
 }];

@@ -1,24 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-interface Skills {
-  title: string;
-  desc: string;
-  icon: string;
-}
 
 @Component({
-  selector: 'vectorit-website',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  templateUrl: './vectorit-website.component.html',
-  styleUrls: ['./vectorit-website.component.css'],
+  selector: 'app-about-component',
+  imports: [],
+  templateUrl: './about-component.html',
+  styleUrl: './about-component.css'
 })
-export class VectoritWebsiteComponent {
-  readonly year = new Date().getFullYear();
-
+export class AboutComponent {
   readonly services: Skills[] = [
     {
       title: 'Cloud Architecture',
@@ -36,4 +24,10 @@ export class VectoritWebsiteComponent {
       icon: 'Layers',
     },
   ];
+}
+
+interface Skills {
+  title: string;
+  desc: string;
+  icon: string;
 }

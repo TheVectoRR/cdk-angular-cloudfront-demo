@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VectoritWebsiteComponent } from './vectorit-website.component';
+import { FooterComponent } from './footer-component';
 
-describe('VectoritWebsiteComponent', () => {
-  let component: VectoritWebsiteComponent;
-  let fixture: ComponentFixture<VectoritWebsiteComponent>;
+describe('FooterComponent', () => {
+  let component: FooterComponent;
+  let fixture: ComponentFixture<FooterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VectoritWebsiteComponent]
+      imports: [FooterComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(VectoritWebsiteComponent);
+    fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

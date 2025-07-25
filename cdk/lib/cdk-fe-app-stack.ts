@@ -64,13 +64,13 @@ export class CdkFeAppStack extends Stack {
         {
           httpStatus: 403,
           responseHttpStatus: 200,
-          responsePagePath: '/error.html', // TODO add error page
+          responsePagePath: '/index.csr.html', // TODO add error page
           ttl: Duration.minutes(5),
         },
         {
           httpStatus: 404,
           responseHttpStatus: 200,
-          responsePagePath: '/error.html', // TODO add error page
+          responsePagePath: '/index.csr.html', // TODO add error page
           ttl: Duration.minutes(5),
         },
       ],
