@@ -11,7 +11,14 @@
   --accent: #66d9e8;
   --line: #1f2642;
 }
-
+/*.page {*/
+/*  --bg: #f7f9fc;*/
+/*  --surface: #ffffff;*/
+/*  --text: #0f1221;*/
+/*  --muted: #5c6478;*/
+/*  --accent: #3aa7f2;*/
+/*  --line: #e6e9f2;*/
+/*}*/
 .page {
   background: var(--bg);
   color: var(--text);
@@ -24,7 +31,7 @@
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #1a2244, #0f152b);
+  background: linear-gradient(135deg, var(--line), var(--surface));
   border-bottom: 1px solid var(--line);
 }
 
@@ -103,6 +110,12 @@ h2 {
   max-width: 70ch;
 }
 
+.focus {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+}
+
 .focus ul {
   list-style: none;
   padding: 0;
@@ -179,7 +192,7 @@ h2 {
 }
 
 .tag {
-  background: #121938;
+  background: var(--line);
   border: 1px solid var(--line);
   padding: .25rem .5rem;
   border-radius: .5rem;
