@@ -1,133 +1,125 @@
-<!-- ================= HERO ================= -->
-<section
-  class="relative bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white overflow-hidden"
->
-  <div
-    class="max-w-4xl mx-auto text-center px-6 py-32"
-  >
-    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
-      Navigate Your Future
-    </h1>
-    <!--    <lucide-icon size=50 name="cloud"></lucide-icon>-->
-    <p
-      class="mt-6 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
-    >
-      Strategic software consulting that turns complex challenges into
-      elegant, scalable solutions.
-    </p>
-    <!--    <button-->
-    <!--      class="mt-10 bg-white text-[var(&#45;&#45;primary)] hover:bg-white/90 font-semibold px-6 py-3 rounded-lg"-->
-    <!--    >-->
-    <!--      Let’s Talk-->
-    <!--    </button>-->
-  </div>
-
-  <!-- angled bottom edge -->
-  <svg
-    class="absolute bottom-0 left-0 w-full translate-y-1"
-    viewBox="0 0 1440 100"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M0 100L1440 0V100H0Z" fill="#ffffff"/>
-  </svg>
-</section>
-
-<!-- ================= ABOUT ================= -->
-<section id="about" class="py-24 bg-white">
-  <div
-    class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6 md:px-8"
-  >
-    <div>
-      <img
-        src="/profile.jpg"
-        alt="My profile"
-        class="rounded-3xl shadow-xl object-cover w-full h-96 md:h-[28rem]"
-      />
-    </div>
-
-    <div>
-      <h2 class="text-3xl font-bold mb-4 text-[var(--primary)]">Who Am I</h2>
-      <div class="text-gray-700 leading-relaxed text-lg">
-        <p class="mb-4">I'm the founder of VectorIT and a senior software engineer and architect with over a decade of experience building high-impact platforms for fintech,
-        e-commerce, and SaaS scale-ups. I enjoy turning ambitious ideas into solid, user-friendly solutions that help businesses grow.</p>
-
-        <p>I started out as a full stack developer,
-        mostly with Java and Angular, and over the years naturally grew into DevOps, especially in AWS.
-        What keeps me going is the balance between creating robust applications and building the cloud systems that support them.</p>
-
-<!--        <p>I enjoy developing features, designing APIs, and automating infrastructure with the same level of enthusiasm. Whether it’s coding, deploying, or optimizing, I simply love making things that work — and work well.</p>-->
+<main class="page">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <h1>Jonathan Oudshoorn</h1>
+        <p class="kicker">DevOps & Cloud Engineer · AWS Certified · Full‑stack roots</p>
+        <p class="lead">
+          I build scalable, reliable systems in the cloud, automate delivery, and tinker in my
+          Proxmox‑powered GitOps homelab. 10+ years across Java/NodeJS/AWS.
+        </p>
+        <nav class="hero__ctas">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#blog" class="btn btn--ghost">Blog (soon)</a>
+        </nav>
       </div>
-      <div class="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-4">
-        <a
-          href="mailto:jonathan@vectorit.com"
-          class="inline-flex items-center justify-center border border-gray-300 px-5 py-3 rounded-lg font-medium text-gray-700 hover:bg-gray-100 transition-colors w-full sm:w-auto"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M2.94 4.94A2 2 0 014.34 4h11.32a2 2 0 011.4.58l-7.06 5.65L2.94 4.94z" />
-            <path d="M2 6.23v8.54l6.62-5.29L2 6.23zm8.71 4.51l6.58 5.26V6.21l-6.58 4.53z" />
-          </svg>
-          Email Me
-        </a>
-        <a
-          href="https://www.linkedin.com/in/jonathan-oudshoorn-3a2229a2/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center bg-[var(--primary)] text-white px-5 py-3 rounded-lg font-medium hover:bg-[var(--primary)]/90 transition-colors w-full sm:w-auto"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.7v2.3h.1c.7-1.3 2.4-2.6 5-2.6 5.3 0 6.3 3.5 6.3 8.1V24h-5v-7.2c0-1.7-.03-3.8-2.3-3.8-2.3 0-2.6 1.8-2.6 3.7V24h-5V8z"/>
-          </svg>
-          LinkedIn Profile
-        </a>
+      <div class="hero__img" role="img" aria-label="Portrait of Jonathan">
+        <!-- Replace with your optimized image -->
+        <img src="profile.jpg" alt="Jonathan Oudshoorn" />
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= SERVICES ================= -->
-<section id="services" class="py-24 bg-gray-50">
-  <h2
-    class="text-center text-3xl font-bold text-[var(--primary)] mb-16"
-  >
-    Our Services
-  </h2>
+  <!-- About / Current Focus -->
+  <section class="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>
+        Freelance DevOps engineer and cloud‑native backend developer with a strong Java/Node.js/AWS
+        background. I’ve helped teams at <strong>NS</strong>, <strong>KVK</strong> and <strong>Kadaster</strong>
+        deliver secure, high‑impact systems. Lately I focus on AWS serverless, Kubernetes, CI/CD and
+        secrets management.
+      </p>
 
-  <div
-    class="max-w-6xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 gap-6 px-6 md:px-8"
-  >
-    @for (s of services; track s.title) {
-      <ng-container>
-        <div>
-          <div
-            class="h-full bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow flex flex-col"
-          >
-            <!--            <lucide-icon-->
-            <!--              name="{{s.icon}}"-->
-            <!--              class="h-10 w-10 text-[var(&#45;&#45;accent)] mb-4"-->
-            <!--            ></lucide-icon>-->
-            <h3 class="text-xl font-semibold tracking-tight mb-2">
-              {{ s.title }}
-            </h3>
-            <p class="text-gray-600 leading-relaxed pb-6">{{ s.desc }}</p>
-          </div>
-        </div>
-      </ng-container>
-    }
-  </div>
-</section>
+      <div class="focus">
+        <h3>Current Focus</h3>
+        <ul>
+          <li>Migrating legacy Java/Spring workloads to modern <strong>AWS serverless</strong> stacks</li>
+          <li>GitOps with <strong>ArgoCD</strong> and <strong>External Secrets Operator</strong> on k8s</li>
+          <li>Self‑hosting portfolio apps on a <strong>Proxmox</strong> homelab</li>
+          <li>Writing practical DevOps notes and lessons (blog coming soon)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<!-- ================= CONTACT =================-->
-<section id="contact" class="py-20 bg-white">
-  <div
-    class="max-w-xl mx-auto text-center px-6"
-  >
-    <h2 class="text-3xl font-bold text-[var(--primary)] mb-6">
-      Let’s work together
-    </h2>
-    <p class="text-lg text-gray-700 mb-8">
-      Ready to accelerate your roadmap? Get in touch—we’ll respond within one
-      business day.
-    </p>
-  </div>
-</section>
+  <!-- Tech Stack -->
+  <section class="stack">
+    <div class="container">
+      <h2>Tech Stack</h2>
+      <ul class="stack__list" aria-label="Primary tools and technologies">
+        <li>AWS (CDK, Lambda, API Gateway, S3, DynamoDB)</li>
+        <li>Kubernetes · ArgoCD · ESO</li>
+        <li>Java · Spring Boot</li>
+        <li>Node.js · TypeScript · Angular</li>
+        <li>CI/CD (Jenkins, GitLab, Azure DevOps)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects / Portfolio -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <p class="muted">Live demos from the homelab are rolling out gradually. Here’s what’s coming:</p>
+
+      <div class="cards">
+        @for (p of projects; track p.title) {
+          <article class="card" [attr.data-status]="p.status">
+            <div class="card__header">
+              <h3>{{ p.title }}</h3>
+              <span class="badge" [class.badge--live]="p.status==='live'" [class.badge--progress]="p.status==='in-progress'">{{ p.status }}</span>
+            </div>
+            <p class="card__summary">{{ p.summary }}</p>
+            @for (t of p.tags; track t) {
+              <ul class="tags">
+                <li class="tag">{{ t }}</li>
+              </ul>
+            }
+            @if(p.link) {
+              <div class="card__footer">
+                <a [href]="p.link" rel="noopener" class="link">Open demo</a>
+              </div>
+            }
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog teasers -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <h2>Blogs</h2>
+      <p class="muted">Coming soon</p>
+<!--      <ul class="teasers">-->
+<!--        <li *ngFor="let b of blog">-->
+<!--          <h3>{{ b.title }}</h3>-->
+<!--          <p>{{ b.summary }}</p>-->
+<!--          <small *ngIf="b.eta">ETA: {{ b.eta }}</small>-->
+<!--        </li>-->
+<!--      </ul>-->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <div class="container contact__inner">
+      <div>
+        <h2>Contact</h2>
+        <p>
+          <a class="link" href="mailto:jonathan&#64;vectorit.nl">jonathan&#64;vectorit.nl</a>
+        </p>
+        <p>
+          <a class="link" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+          ·
+          <a class="link" href="https://github.com/TheVectoRR" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+      <div class="note">
+        <p class="muted">Built with Angular · Deployed on AWS · Managed GitOps‑style in my homelab</p>
+      </div>
+    </div>
+  </section>
+</main>

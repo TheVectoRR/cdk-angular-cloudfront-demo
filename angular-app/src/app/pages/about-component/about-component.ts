@@ -7,27 +7,48 @@ import { Component } from '@angular/core';
   styleUrl: './about-component.css'
 })
 export class AboutComponent {
-  readonly services: Skills[] = [
+  projects: ProjectCard[] = [
     {
-      title: 'Cloud Architecture',
-      desc: 'Design and optimise secure, scalable cloud‑native infrastructures on AWS & Azure.',
-      icon: 'Cloud',
+      title: 'GitOps Homelab – k3s on Proxmox',
+      summary: 'FluxCD‑managed workloads with External Secrets Operator pulling from AWS; IaC in GitHub.',
+      status: 'in-progress',
+      tags: ['FluxCD', 'k3s', 'Proxmox', 'GitOps']
     },
     {
-      title: 'AI Integration',
-      desc: 'Embed generative AI and machine‑learning capabilities into existing products and workflows.',
-      icon: 'Brain',
+      title: 'Secrets Management Patterns',
+      summary: 'Compare AWS Secrets Manager vs Parameter Store for k8s apps with automated rotation.',
+      status: 'planned',
+      tags: ['Security', 'AWS', 'Kubernetes']
+    }
+  ];
+
+  blog: BlogTeaser[] = [
+    {
+      title: 'Why I Built a GitOps Homelab',
+      summary: 'How a home cluster keeps my skills sharp and feeds real‑world experimentation.',
+      eta: 'September'
     },
     {
-      title: 'DevOps & Kubernetes',
-      desc: 'Automate builds, tests, and continuous delivery with container‑orchestrated pipelines.',
-      icon: 'Layers',
+      title: 'Secrets in Kubernetes with AWS',
+      summary: 'ESO, IRSA, and practical guardrails for small teams.'
     },
+    {
+      title: 'From Full‑stack to DevOps',
+      summary: 'Lessons from migrating legacy stacks and owning CI/CD.'
+    }
   ];
 }
 
-interface Skills {
+interface ProjectCard {
   title: string;
-  desc: string;
-  icon: string;
+  summary: string;
+  status: 'live' | 'in-progress' | 'planned';
+  tags: string[];
+  link?: string; // optional external link or route
+}
+
+interface BlogTeaser {
+  title: string;
+  summary: string;
+  eta?: string;
 }
