@@ -1,10 +1,9 @@
 <main class="page">
-  <section class="hero">
+  <section class="lighter-background">
     <app-hero-component></app-hero-component>
   </section>
 
-  <!-- About / Current Focus -->
-  <section class="about container">
+  <section class="container about">
       <h2>About</h2>
       <p>
         Freelance DevOps engineer and cloud‑native backend developer with a strong Java/Node.js/AWS
@@ -23,26 +22,16 @@
       </div>
   </section>
 
-  <section class="stack">
+  <section class="lighter-background">
     <app-tech-stack-component></app-tech-stack-component>
   </section>
 
-  <!-- Projects / Portfolio -->
   <section id="projects" class="projects">
     <app-projects-component></app-projects-component>
   </section>
 
-  <!-- Blog teasers -->
-  <section id="blog" class="container blog">
-      <h2>Blogs</h2>
-      <p class="muted">Coming soon</p>
-<!--      <ul class="teasers">-->
-<!--        <li *ngFor="let b of blog">-->
-<!--          <h3>{{ b.title }}</h3>-->
-<!--          <p>{{ b.summary }}</p>-->
-<!--          <small *ngIf="b.eta">ETA: {{ b.eta }}</small>-->
-<!--        </li>-->
-<!--      </ul>-->
+  <section id="blog" class="lighter-background">
+    <app-blog-component></app-blog-component>
   </section>
 
   <!-- Contact -->
