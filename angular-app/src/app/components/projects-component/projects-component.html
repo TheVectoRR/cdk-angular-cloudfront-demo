@@ -1,0 +1,46 @@
+<div class="container">
+  <h2>Projects</h2>
+  <p class="muted">Live demos from the homelab are rolling out gradually. Here’s what’s coming:</p>
+
+  <div class="cards">
+    @for (p of projects; track p.title) {
+      <article class="card" [attr.data-status]="p.status">
+        <div class="card__header">
+          <h3 class="card__title">{{ p.title }}</h3>
+          <span class="badge"
+                [class.badge--live]="p.status === ProjectStatus.Live"
+                [class.badge--progress]="p.status === ProjectStatus.InProgress"
+                [class.badge--planned]="p.status === ProjectStatus.Planned">
+            {{ p.status }}
+          </span>
+        </div>
+
+        <p class="card__summary line-clamp-4">{{ p.summary }}</p>
+
+        <ul class="tags">
+          @for (t of p.tags; track t) {
+            <li class="tag">{{ t }}</li>
+          }
+        </ul>
+
+        <div class="card__footer">
+
+          @if (p.githubLink) {
+            <a [href]="p.githubLink" rel="noopener" class="link">View Code</a>
+          } @else {
+            <ng-template>
+              <span class="link link--placeholder" aria-hidden="true">View Code</span>
+            </ng-template>
+          }
+
+          @if (p.link) {
+            <a [href]="p.link" rel="noopener" class="link">Live Demo</a>
+          } @else {
+            <!-- Reserve space so 'View Code' sits at the same height across cards -->
+            <span class="link link--placeholder" aria-hidden="true">Live Demo</span>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</div>

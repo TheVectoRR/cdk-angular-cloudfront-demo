@@ -1,29 +1,15 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from '../../components/hero-component/hero-component';
 import { TechStackComponent } from '../../components/tech-stack-component/tech-stack-component';
+import { ProjectsComponent } from '../../components/projects-component/projects-component';
 
 @Component({
   selector: 'app-about-component',
-  imports: [HeroComponent, TechStackComponent],
+  imports: [HeroComponent, TechStackComponent, ProjectsComponent],
   templateUrl: './about-component.html',
   styleUrl: './about-component.css'
 })
 export class AboutComponent {
-  projects: ProjectCard[] = [
-    {
-      title: 'GitOps Homelab – k3s on Proxmox',
-      summary: 'FluxCD‑managed workloads with External Secrets Operator pulling from AWS; IaC in GitHub.',
-      status: 'in-progress',
-      tags: ['FluxCD', 'k3s', 'Proxmox', 'GitOps']
-    },
-    {
-      title: 'Secrets Management Patterns',
-      summary: 'Compare AWS Secrets Manager vs Parameter Store for k8s apps with automated rotation.',
-      status: 'planned',
-      tags: ['Security', 'AWS', 'Kubernetes']
-    }
-  ];
-
   blog: BlogTeaser[] = [
     {
       title: 'Why I Built a GitOps Homelab',
@@ -39,14 +25,6 @@ export class AboutComponent {
       summary: 'Lessons from migrating legacy stacks and owning CI/CD.'
     }
   ];
-}
-
-interface ProjectCard {
-  title: string;
-  summary: string;
-  status: 'live' | 'in-progress' | 'planned';
-  tags: string[];
-  link?: string; // optional external link or route
 }
 
 interface BlogTeaser {

@@ -1,5 +1,4 @@
 <main class="page">
-  <!-- Hero -->
   <section class="hero">
     <app-hero-component></app-hero-component>
   </section>
@@ -24,37 +23,13 @@
       </div>
   </section>
 
-  <!-- Tech Stack -->
   <section class="stack">
     <app-tech-stack-component></app-tech-stack-component>
   </section>
 
   <!-- Projects / Portfolio -->
-  <section id="projects" class="container projects">
-      <h2>Projects</h2>
-      <p class="muted">Live demos from the homelab are rolling out gradually. Here’s what’s coming:</p>
-
-      <div class="cards">
-        @for (p of projects; track p.title) {
-          <article class="card" [attr.data-status]="p.status">
-            <div class="card__header">
-              <h3>{{ p.title }}</h3>
-              <span class="badge" [class.badge--live]="p.status==='live'" [class.badge--progress]="p.status==='in-progress'">{{ p.status }}</span>
-            </div>
-            <p class="card__summary">{{ p.summary }}</p>
-            @for (t of p.tags; track t) {
-              <ul class="tags">
-                <li class="tag">{{ t }}</li>
-              </ul>
-            }
-            @if(p.link) {
-              <div class="card__footer">
-                <a [href]="p.link" rel="noopener" class="link">Open demo</a>
-              </div>
-            }
-          </article>
-        }
-      </div>
+  <section id="projects" class="projects">
+    <app-projects-component></app-projects-component>
   </section>
 
   <!-- Blog teasers -->
