@@ -1,23 +1,7 @@
 <main class="page">
   <!-- Hero -->
   <section class="hero">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <h1>Jonathan Oudshoorn</h1>
-        <p class="kicker">DevOps & Cloud Engineer · AWS Certified · Full‑stack roots</p>
-        <p class="lead">
-          I build scalable, reliable systems in the cloud, automate delivery, and tinker in my
-          Proxmox‑powered GitOps homelab. 10+ years across Java/NodeJS/AWS.
-        </p>
-        <nav class="hero__ctas">
-          <a href="#projects" class="btn">View Projects</a>
-          <a href="#blog" class="btn btn--ghost">Blog (soon)</a>
-        </nav>
-      </div>
-      <div class="hero__img" role="img" aria-label="Portrait of Jonathan">
-        <img src="profile.jpg" alt="Jonathan Oudshoorn" />
-      </div>
-    </div>
+    <app-hero-component></app-hero-component>
   </section>
 
   <!-- About / Current Focus -->
@@ -41,15 +25,8 @@
   </section>
 
   <!-- Tech Stack -->
-  <section class="stack container">
-      <h2>Tech Stack</h2>
-      <ul class="stack__list" aria-label="Primary tools and technologies">
-        <li>AWS (CDK, Lambda, API Gateway, S3, DynamoDB)</li>
-        <li>Java · Spring Boot</li>
-        <li>Node.js · TypeScript · Angular</li>
-        <li>Kubernetes · FluxCD</li>
-        <li>Devops</li>
-      </ul>
+  <section class="stack">
+    <app-tech-stack-component></app-tech-stack-component>
   </section>
 
   <!-- Projects / Portfolio -->

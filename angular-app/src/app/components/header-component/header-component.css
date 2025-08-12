@@ -10,10 +10,6 @@
   padding: 1rem 0; /* vertical only; horizontal comes from .container */
 }
 
-@media (min-width:768px){
-  .header-container{ padding-block: 1rem; }
-}
-
 .logo-section{
   display:flex;
   align-items:center;
@@ -31,4 +27,9 @@
   font-size:1.5rem;
   font-weight:bold;
   letter-spacing:-0.015625em;
+}
+
+
+@media (min-width:768px){
+  .header-container{ padding-block: 1rem; }
 }

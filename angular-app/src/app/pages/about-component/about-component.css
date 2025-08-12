@@ -5,49 +5,11 @@
   color: var(--text);
 }
 
-/* Hero */
 .hero{
   background: linear-gradient(135deg, var(--line), var(--surface));
   border-bottom: 1px solid var(--line);
 }
 
-/* Use the global .container for width; keep grid specifics here */
-.hero__inner{
-  display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 3rem;
-  align-items:center;
-  padding-block: 5rem; /* vertical only */
-}
-
-.hero h1{
-  font-size: clamp(2.2rem, 3.5vw, 3rem);
-  margin: 0 0 .25rem;
-  letter-spacing: .2px;
-}
-
-.kicker{ color: var(--accent); margin: 0 0 1rem; font-weight: 600; }
-
-.lead{
-  max-width: 60ch;
-  line-height: 1.55;
-  color: var(--text);
-  opacity: .95;
-}
-
-.hero__ctas{ margin-top:1.25rem; display:flex; gap:.75rem; }
-
-/* Buttons now come from global .btn / .btn--ghost */
-
-.hero__img img{
-  width:100%;
-  border-radius:1.2rem;
-  box-shadow:0 10px 40px rgba(0,0,0,.35);
-  border:1px solid var(--line);
-}
-
-/* Sections (section padding moved global, keep headings here) */
-h2{ font-size:1.6rem; margin:0 0 1rem; }
 .muted{ color: var(--muted); }
 
 .about p{ max-width:70ch; }
@@ -67,18 +29,9 @@ h2{ font-size:1.6rem; margin:0 0 1rem; }
   border-radius:.6rem;
 }
 
-/* Stack */
 .stack{
   background: var(--surface);
   border-block: 1px solid var(--line);
-}
-.stack__list{
-  display:flex; gap:.6rem; flex-wrap:wrap; list-style:none; padding:0; margin:0;
-}
-.stack__list li{
-  border:1px solid var(--line);
-  padding:.4rem .6rem;
-  border-radius:.6rem;
 }
 
 /* Projects */
@@ -135,7 +88,6 @@ h2{ font-size:1.6rem; margin:0 0 1rem; }
 
 /* Responsive */
 @media (max-width:900px){
-  .hero__inner{ grid-template-columns:1fr; gap:2rem; padding-block:3rem; }
   .contact__inner{ flex-direction:column; align-items:flex-start; }
   .note{ text-align:left; }
 }

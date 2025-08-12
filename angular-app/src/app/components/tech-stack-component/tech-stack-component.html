@@ -1,0 +1,24 @@
+<div class="skills container">
+  <h2>Skills</h2>
+
+  <ul class="list" role="list">
+    @for (sc of skillsList; track sc) {
+      <li class="item">
+        <div class="item-header">
+          <h3 class="category">{{ sc.category }}</h3>
+          <span class="badge badge--progress" aria-label="Years of experience">
+          {{ sc.yearsOfExperience }} Yrs Exp
+        </span>
+        </div>
+
+        <ul class="tags">
+          @for (t of sc.technologies; track t) {
+            <li class="tag">
+              {{ t }}
+            </li>
+          }
+        </ul>
+      </li>
+    }
+  </ul>
+</div>

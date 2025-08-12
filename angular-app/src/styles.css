@@ -21,6 +21,8 @@
 /*  --line: #e6e9f2;*/
 /*}*/
 
+h2{ font-size:1.6rem; margin:0 0 1rem; }
+
 .container{
   width: min(var(--container-max), 100% - var(--container-pad) * 2);
   margin-inline: auto;

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { HeroComponent } from '../../components/hero-component/hero-component';
+import { TechStackComponent } from '../../components/tech-stack-component/tech-stack-component';
 
 @Component({
   selector: 'app-about-component',
-  imports: [],
+  imports: [HeroComponent, TechStackComponent],
   templateUrl: './about-component.html',
   styleUrl: './about-component.css'
 })
