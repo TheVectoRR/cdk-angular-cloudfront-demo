@@ -15,14 +15,14 @@ export class TechStackComponent {
       yearsOfExperience: '10+'
     },
     {
-      category: 'Native Cloud Development',
-      technologies: ['AWS', 'CDK', 'Serverless', 'Lambda', 'S3', 'DynamoDB', 'SQS'],
+      category: 'AWS & Serverless Engineering',
+      technologies: ['AWS', 'CDK', 'CICD', 'Serverless', 'Lambda', 'S3', 'DynamoDB', 'SQS'],
       yearsOfExperience: '6'
     },
     {
       category: 'Devops',
-      technologies: ['CICD', 'Kubernetes','GitOps', 'FluxCD'],
-      yearsOfExperience: '2'
+      technologies: ['Kubernetes','GitOps', 'FluxCD', 'Kustomize', 'CICD'],
+      yearsOfExperience: '1'
     }
   ];
 }

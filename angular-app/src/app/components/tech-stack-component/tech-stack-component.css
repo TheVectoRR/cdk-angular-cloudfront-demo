@@ -16,7 +16,7 @@
 .item-header {
   display: flex;
   align-items: baseline;
-  justify-content: space-between; /* puts years badge top-right */
+  justify-content: space-between;
 }
 
 .category {
@@ -24,4 +24,12 @@
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--accent);
+}
+
+.disclaimer {
+  display: block;             /* Makes it take a full line */
+  font-size: 0.85rem;          /* Slightly smaller than normal text */
+  color: #aaa;                 /* Light gray for subtlety */
+  margin-top: 0.5rem;          /* Space above */
+  line-height: 1.4;            /* Comfortable line height */
 }
