@@ -2,6 +2,84 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #0066ff;
-  --accent: #00d9ff;
+  --bg: #0b1020;
+  --surface: #0f152b;
+  --text: #e8ebf6;
+  --muted: #a8b0c3;
+  --accent: #66d9e8;
+  --line: #1f2642;
+  --container-max: 1100px;
+  --container-pad: 24px;
+}
+
+/*:root {*/
+/*  --bg: #f7f9fc;*/
+/*  --surface: #ffffff;*/
+/*  --text: #0f1221;*/
+/*  --muted: #5c6478;*/
+/*  --accent: #3aa7f2;*/
+/*  --line: #e6e9f2;*/
+/*}*/
+
+.container{
+  width: min(var(--container-max), 100% - var(--container-pad) * 2);
+  margin-inline: auto;
+}
+
+/* Optional: page-wide section rhythm */
+section{
+  padding-block: 3.5rem;
+}
+
+/* ---- Reusable atoms ---- */
+.btn{
+  background: var(--accent);
+  color: #0b1020;
+  padding: .7rem 1rem;
+  border-radius: .8rem;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.btn--ghost{
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge{
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  padding: .15rem .45rem;
+  border-radius: .4rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.badge--live{ color:#1a3; border-color:#1a3; }
+.badge--progress{ color:#da3; border-color:#da3; }
+
+.link{
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.tags{
+  display:flex;
+  gap:.4rem;
+  flex-wrap:wrap;
+  list-style:none;
+  padding:0;
+  margin:.25rem 0 0;
+}
+
+.tag{
+  background: var(--line);
+  border: 1px solid var(--line);
+  padding: .25rem .5rem;
+  border-radius: .5rem;
+  font-size: .85rem;
+  color: var(--muted);
 }
