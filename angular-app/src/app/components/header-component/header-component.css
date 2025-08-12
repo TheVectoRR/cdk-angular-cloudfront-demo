@@ -1,8 +1,3 @@
-.app-header{
-  background-color: var(--bg);
-  color: white;
-}
-
 .header-container{
   display:flex;
   align-items:center;
