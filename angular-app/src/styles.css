@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+:host{ display:block; }
 
 :root {
   --bg: #0b1020;
@@ -28,12 +29,10 @@ h2{ font-size:1.6rem; margin:0 0 1rem; }
   margin-inline: auto;
 }
 
-/* Optional: page-wide section rhythm */
 section{
   padding-block: 3.5rem;
 }
 
-/* ---- Reusable atoms ---- */
 .btn{
   background: var(--accent);
   color: #0b1020;
@@ -85,3 +84,4 @@ section{
   font-size: .85rem;
   color: var(--muted);
 }
+.muted{ color: var(--muted); }

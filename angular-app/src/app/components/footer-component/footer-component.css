@@ -1,0 +1,15 @@
+.contact{
+  background-color: var(--bg);
+  color: white;
+}
+
+.contact__inner{
+  display:flex; gap:2rem; justify-content:space-between; align-items:center;
+}
+.note{ text-align:right; }
+
+/* Responsive */
+@media (max-width:900px){
+  .contact__inner{ flex-direction:column; align-items:flex-start; }
+  .note{ text-align:left; }
+}

@@ -1,0 +1,6 @@
+.lighter-background {
+  background: linear-gradient(135deg, var(--line), var(--surface));
+  border-bottom: 1px solid var(--line);
+}
+
+

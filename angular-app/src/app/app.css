@@ -2,3 +2,7 @@
 /*    --primary: #0066ff;*/
 /*    --accent: #00d9ff;*/
 /*}*/
+.page{
+  background: var(--bg);
+  color: var(--text);
+}

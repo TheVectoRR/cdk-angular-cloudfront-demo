@@ -1,0 +1,14 @@
+.focus{
+  margin-top:2rem;
+  padding-left:1rem;
+  border-left:3px solid var(--accent);
+}
+.focus ul{
+  list-style:none; padding:0; margin:1rem 0 0; display:grid; gap:.5rem;
+}
+.focus li{
+  background: var(--surface);
+  border:1px solid var(--line);
+  padding:.6rem .75rem;
+  border-radius:.6rem;
+}
