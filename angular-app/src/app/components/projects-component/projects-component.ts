@@ -12,7 +12,7 @@ export class ProjectsComponent {
     {
       title: 'AWS-Hosted Website with CloudFront Edge Delivery',
       summary: 'High-performance Angular site served globally via AWS CloudFront and Route 53. Fully automated IaC with AWS CDK in GitHub.',
-      status: ProjectStatus.Live,
+      status: ProjectStatus.InProgress,
       tags: ['AWS', 'Route 53', 'CloudFront', 'CDK', 'Angular'],
       githubLink: 'https://github.com/TheVectoRR/cdk-angular-cloudfront-demo',
       link: 'https://dev.vecode.nl/'
