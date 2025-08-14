@@ -15,7 +15,7 @@ export class PipelineStack extends Stack {
             synth: new pipelines.ShellStep('Synth', {
                 input: pipelines.CodePipelineSource.connection(
                     'TheVectoRR/cdk-angular-cloudfront-demo',
-                    'CodeBuild',
+                    'main',
                     { connectionArn, }
                 ),
                 commands: [
