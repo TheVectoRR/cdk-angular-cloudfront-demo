@@ -1,6 +1,7 @@
 import { Construct } from 'constructs';
 import { pipelines, Stack, StackProps } from 'aws-cdk-lib';
 import { AppStage } from './app-stage';
+import { BuildSpec } from 'aws-cdk-lib/aws-codebuild';
 
 export class PipelineStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
@@ -10,10 +11,13 @@ export class PipelineStack extends Stack {
 
         const pipeline = new pipelines.CodePipeline(this, 'Pipeline', {
             pipelineName: 'VectorIT-website-Pipeline',
+
             synth: new pipelines.ShellStep('Synth', {
-                input: pipelines.CodePipelineSource.connection('TheVectoRR/cdk-angular-cloudfront-demo', 'CodeBuild', {
-                    connectionArn,
-                }),
+                input: pipelines.CodePipelineSource.connection(
+                    'TheVectoRR/cdk-angular-cloudfront-demo',
+                    'CodeBuild',
+                    { connectionArn, }
+                ),
                 commands: [
                     // refresh angular build and deploy (should be done first)
                     'cd angular-app',
@@ -29,6 +33,17 @@ export class PipelineStack extends Stack {
                 ],
                 primaryOutputDirectory: 'cdk/cdk.out',
             }),
+            synthCodeBuildDefaults: {
+                partialBuildSpec: BuildSpec.fromObject({
+                    phases: {
+                        install: {
+                            "runtime-versions": {
+                                nodejs: "20"
+                            }
+                        }
+                    }
+                })
+            }
         });
 
         pipeline.addStage(new AppStage(this, 'Dev', {
