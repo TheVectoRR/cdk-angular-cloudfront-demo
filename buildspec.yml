@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - echo "starting installing"
+  pre_build:
+    commands:
+      - echo "pre build phase"
+  build:
+    commands:
+      - echo start building...
+      - cd angular-app
+      - npm install
+      - npm run build
+  post_build:
+    commands:
+      - echo "post build"
