@@ -11,12 +11,14 @@ export class PipelineStack extends Stack {
 
         const pipeline = new pipelines.CodePipeline(this, 'Pipeline', {
             pipelineName: 'VectorIT-website-Pipeline',
+            selfMutation: true,
 
             synth: new pipelines.ShellStep('Synth', {
                 input: pipelines.CodePipelineSource.connection(
                     'TheVectoRR/cdk-angular-cloudfront-demo',
                     'main',
-                    { connectionArn, }
+                    { connectionArn, },
+
                 ),
                 commands: [
                     // refresh angular build and deploy (should be done first)
