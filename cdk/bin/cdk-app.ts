@@ -12,7 +12,7 @@ new CdkAppStack(app, 'CdkAppStack', {
 new CdkFeAppStack(app, 'CdkFrontendAppStack', {
     domainName: stackEnv.domainName,
     siteSubDomain: stackEnv.siteSubDomain,
-    certificateArn: stackEnv.certificateArn,
+    certArnParameterStoreKey: stackEnv.certArnParameterStoreKey,
     env: {
         account: process.env.CDK_DEFAULT_ACCOUNT,
         region: process.env.CDK_DEFAULT_REGION

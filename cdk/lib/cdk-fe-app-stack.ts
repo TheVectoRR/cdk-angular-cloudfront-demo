@@ -18,11 +18,12 @@ import { ARecord, HostedZone, RecordTarget } from 'aws-cdk-lib/aws-route53';
 import { Certificate } from 'aws-cdk-lib/aws-certificatemanager';
 import { CloudFrontTarget } from 'aws-cdk-lib/aws-route53-targets';
 import { S3BucketOrigin } from 'aws-cdk-lib/aws-cloudfront-origins';
+import { StringParameter } from 'aws-cdk-lib/aws-ssm';
 
 interface StaticSiteStackProps extends StackProps{
   domainName: string;
   siteSubDomain: string;
-  certificateArn: string;
+  certArnParameterStoreKey: string;
 }
 
 export class CdkFeAppStack extends Stack {
@@ -45,7 +46,7 @@ export class CdkFeAppStack extends Stack {
     siteBucket.grantRead(originAccessIdentity);
 
     // certificate was created manually since it has to be in us-east-1.
-    const certificateArn = props.certificateArn;
+    const certificateArn = StringParameter.valueForStringParameter(this, props.certArnParameterStoreKey);
 
     const s3Origin = S3BucketOrigin.withOriginAccessControl(siteBucket, {
       originAccessLevels: [AccessLevel.READ],
@@ -90,6 +91,5 @@ export class CdkFeAppStack extends Stack {
     });
 
     new CfnOutput(this, 'SiteUrl', {value: `https://${siteDomain}`});
-
   }
 }
